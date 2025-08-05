@@ -1,0 +1,336 @@
+body {
+  font-family: 'Pretendard', 'Segoe UI', 'Apple SD Gothic Neo', sans-serif;
+  margin: 0;
+  background: #181a1b;
+  color: #eaeaea;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+header {
+  background: #181a1b;
+  color: #fff;
+  padding: 0;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+  position: relative;
+  z-index: 10;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  height: 80px;
+  justify-content: flex-start;
+  flex-wrap: nowrap;      /* 한 줄로 고정 */
+  gap: 2rem;
+}
+
+header h1 {
+  margin: 0 2.5rem 0 0;
+  font-size: 1.6rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: #ffd700;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  transition: color 0.2s;
+  white-space: nowrap;    /* 줄바꿈 방지 */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: nowrap;
+  position: relative;
+}
+
+nav li {
+  white-space: nowrap;    /* 메뉴 항목 줄바꿈 방지 */
+}
+
+form#searchForm {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;      /* 검색폼도 한 줄로 */
+}
+
+#searchInput {
+  min-width: 180px;
+  max-width: 240px;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  background: #232526;
+  color: #ffd700;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  transition: box-shadow 0.2s, background 0.2s;
+  outline: none;
+  white-space: nowrap;    /* 검색창 줄바꿈 방지 */
+}
+
+#searchBtn {
+  margin-left: 0.5rem;
+  background: #ffd700;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #181a1b;
+  white-space: nowrap;    /* 버튼 줄바꿈 방지 */
+}
+
+nav a {
+  color: #eaeaea;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: 
+    background 0.2s, 
+    color 0.2s, 
+    box-shadow 0.25s cubic-bezier(.4,2,.6,1),
+    transform 0.18s cubic-bezier(.4,2,.6,1);
+  position: relative;
+  letter-spacing: 1px;
+  display: block;
+}
+
+nav a:hover, nav a.active {
+  background: #ffd700;
+  color: #181a1b;
+  font-weight: 900;
+  box-shadow: 0 6px 24px 0 rgba(255,215,0,0.18), 0 1.5px 0 #ffd700;
+  transform: translateY(-2px) scale(1.06);
+  text-decoration: none;
+  outline: none;
+}
+
+nav a:focus-visible {
+  outline: 2px solid #ffd700;
+  outline-offset: 2px;
+}
+
+main {
+  padding: 3rem 0 5rem 0;
+  min-height: 60vh;
+  flex: 1 0 auto;
+  overflow-y: auto;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: 2.5rem;
+  background: rgba(34,36,38,0.85);
+  border-radius: 16px;
+  padding: 2rem 2.5rem;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+}
+
+section h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #ffd700;
+  margin-bottom: 1.2rem;
+  letter-spacing: 1px;
+}
+
+button.favorite {
+  background: #ffd700;
+  border: none;
+  padding: 0.3rem 0.7rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 1em;
+  transition: background 0.2s;
+  color: #181a1b;
+  font-weight: bold;
+  vertical-align: middle;
+}
+button.favorite:hover {
+  background: #ff8c00;
+  color: #fff;
+}
+
+footer {
+  background: #181a1b;
+  color: #ffd700;
+  text-align: center;
+  padding: 1.2rem 0 1rem 0;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  margin-top: 0;
+  z-index: 100;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  box-shadow: 0 -2px 12px rgba(0,0,0,0.08);
+}
+
+/* 추가된 스타일 */
+.main-visual {
+  background: linear-gradient(90deg, #232526 0%, #414345 100%);
+  border-radius: 18px;
+  padding: 2.5rem 2rem 2rem 2rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  text-align: center;
+}
+.main-visual h2 {
+  font-size: 2.2rem;
+  color: #ffd700;
+  margin-bottom: 1rem;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+.main-desc {
+  font-size: 1.25rem;
+  color: #fffbe6;
+  margin-bottom: 0;
+}
+
+.features {
+  background: rgba(34,36,38,0.92);
+  border-radius: 16px;
+  padding: 2rem 2.5rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+}
+.features h2 {
+  color: #ffd700;
+  font-size: 1.3rem;
+  margin-bottom: 1.2rem;
+}
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.2rem;
+}
+.feature-list li {
+  background: #232526;
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  color: #ffd700;
+  font-weight: 700;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.feature-list li span {
+  color: #eaeaea;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.contact {
+  background: rgba(34,36,38,0.92);
+  border-radius: 16px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+  margin-bottom: 2.5rem;
+}
+.contact h2 {
+  color: #ffd700;
+  font-size: 1.2rem;
+  margin-bottom: 0.7rem;
+}
+.contact a {
+  color: #ffd700;
+  text-decoration: underline;
+}
+.contact a:hover {
+  color: #ff8c00;
+}
+
+nav li.dropdown {
+  position: relative;
+}
+
+nav .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 160px;
+  background: #232526;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+  z-index: 100;
+  padding: 0.5rem 0;
+}
+
+nav li.dropdown:hover .dropdown-menu,
+nav li.dropdown:focus-within .dropdown-menu {
+  display: block;
+}
+
+nav .dropdown-menu li {
+  white-space: nowrap;
+}
+
+nav .dropdown-menu a {
+  display: block;
+  padding: 0.5rem 1.2rem;
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: background 0.15s, color 0.15s;
+}
+
+nav .dropdown-menu a:hover {
+  background: #ffd700;
+  color: #181a1b;
+}
+
+/* 반응형 */
+@media (max-width: 1200px) {
+  .header-inner {
+    padding: 0 1rem;
+    gap: 1rem;
+  }
+  nav ul {
+    gap: 1rem;
+  }
+  #searchInput {
+    min-width: 120px;
+    max-width: 160px;
+  }
+}
+
+@media (max-width: 900px) {
+  .header-inner {
+    flex-wrap: wrap; /* 모바일에서는 줄바꿈 허용 */
+    height: auto;
+    gap: 0.5rem;
+  }
+  header h1 {
+    font-size: 1.1rem;
+    margin-right: 1rem;
+  }
+  nav ul {
+    gap: 0.7rem;
+  }
+  #searchInput {
+    width: 100px;
+    min-width: 80px;
+  }
+}

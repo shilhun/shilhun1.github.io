@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>인디 게임 레퍼런스</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <h1 id="main-title" style="margin-left:0; cursor:pointer;">인디 게임 레퍼런스</h1>
+      <nav>
+        <ul>
+          <li class="dropdown">
+            <a href="#" data-page="about">인디 게임</a>
+            <ul class="dropdown-menu">
+              <li><a href="#" data-detail="인디 게임">소개/특징</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" data-page="guide">개발 가이드</a>
+            <ul class="dropdown-menu">
+              <li><a href="#" data-detail="기획">기획</a></li>
+              <li><a href="#" data-detail="그래픽/사운드">그래픽/사운드</a></li>
+              <li><a href="#" data-detail="프로그래밍">프로그래밍</a></li>
+              <li><a href="#" data-detail="에셋 추천">에셋 추천</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" data-page="engine">엔진 학습</a>
+            <ul class="dropdown-menu">
+              <li><a href="#" data-detail="설치 및 환경 세팅">설치 및 환경 세팅</a></li>
+              <li><a href="#" data-detail="2D 게임 예제">2D 게임 예제</a></li>
+              <li><a href="#" data-detail="간단한 2D 게임 완성">간단한 2D 게임 완성</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" data-page="marketing">마케팅/출시</a>
+            <ul class="dropdown-menu">
+              <li><a href="#" data-detail="SNS 마케팅">SNS 마케팅</a></li>
+              <li><a href="#" data-detail="플랫폼 배포">플랫폼 배포</a></li>
+              <li><a href="#" data-detail="수익화">수익화</a></li>
+            </ul>
+          </li>
+          <li><a href="#" data-page="favorites">즐겨찾기</a></li>
+        </ul>
+      </nav>
+      <form id="searchForm" style="margin-left:auto; display:flex; align-items:center;">
+        <input type="text" id="searchInput" placeholder="태그/키워드 검색" autocomplete="off">
+        <button type="submit" id="searchBtn" style="margin-left:0.5rem; background:#ffd700; border:none; border-radius:4px; padding:0.5rem 1rem; font-weight:bold; cursor:pointer; color:#181a1b;">검색</button>
+      </form>
+    </div>
+  </header>
+  <main id="content">
+    <!-- 동적으로 내용이 바뀝니다 -->
+  </main>
+  <footer>
+    <small>© 2025 인디 게임 레퍼런스</small>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
